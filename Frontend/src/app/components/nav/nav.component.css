@@ -1,16 +1,35 @@
-/* Styling for the nav container */
+.nav-container-wrapper {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  top: 10px;
+  z-index: 9;
+}
+
+.nav-container-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 60%;
+  height: 10px;
+  background-color: #bee041;
+  border-radius: 10px 10px 0 0;
+  transform: translateX(-50%);
+}
+
 .nav-container {
   background-color: white;
   border-radius: 20px;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   padding: 20px 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Makes it float over the image slider */
-  top: 20px; /* Align it to the top of the page */
-  left: 50%; /* Center it horizontally */
-  transform: translateX(-50%); /* Ensure it is perfectly centered */
-  z-index: 10; /* Make sure it stays on top of the image slider */
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
 .nav-row {
@@ -32,16 +51,24 @@
   gap: 15px;
 }
 
-.email, .phone {
+.email,
+.phone {
   font-size: 22px;
   font-weight: 600;
   color: #2c2c2c;
-  padding-left: 25px;
 }
 
-.phone{
-    border-left: 2px solid #d7d7d7;
+.phone {
+  margin-left: 25px;
+  padding-left: 10px;
+  border-left: 2px solid #d7d7d7;
+}
 
+.email {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: #2c2c2c;
 }
 
 .contact-button {
@@ -81,8 +108,22 @@
   color: #bee041;
 }
 
-/* Image slider container */
-app-image-slider {
-  position: relative; /* Ensures the slider container is positioned normally */
-  z-index: 1; /* Ensure it stays below the nav */
+.contact-item {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-title {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 20px;
+  color: #2c2c2c;
+}
+
+svg {
+  height: 40px;
+  width: 40px;
+  border: 2px solid #2c2c2c;
+  border-radius: 50%;
+  padding: 7px;
 }

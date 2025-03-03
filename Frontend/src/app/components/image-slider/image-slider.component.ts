@@ -10,6 +10,10 @@ import { Component } from '@angular/core';
 })
 export class ImageSliderComponent {
   currentSlideIndex = 0;
+  progressBarWidth = 0; // Progress bar width (in percentage)
+  slideDuration = 5000; // Duration each slide stays active (5 seconds)
+  progressInterval: any; // Store the interval for the progress bar
+
   slides = [
     {
       imgSrc: 'assets/image6.jpg',
@@ -45,14 +49,39 @@ export class ImageSliderComponent {
     this.autoChangeSlide();
   }
 
-  // Automatically change slide every 5 seconds
+  // Automatically change slides every 5 seconds
   autoChangeSlide() {
     setInterval(() => {
       this.nextSlide();
-    }, 5000);
+      this.resetProgressBar();
+    }, this.slideDuration);
+
+    this.startProgressBar();
   }
 
   nextSlide() {
     this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
+  }
+
+  // Reset progress bar
+  resetProgressBar() {
+    this.progressBarWidth = 0;
+    // Clear the previous interval to avoid multiple progress updates
+    clearInterval(this.progressInterval);
+    this.startProgressBar();
+  }
+
+  // Start the progress bar for each slide
+  startProgressBar() {
+    let elapsedTime = 0;
+
+    this.progressInterval = setInterval(() => {
+      elapsedTime += 100; // Increase the elapsed time in 100ms intervals
+      this.progressBarWidth = (elapsedTime / this.slideDuration) * 100; // Calculate the progress in percentage
+
+      if (elapsedTime >= this.slideDuration) {
+        clearInterval(this.progressInterval); // Stop the progress when the slide duration ends
+      }
+    }, 100); // Update progress bar every 100ms
   }
 }

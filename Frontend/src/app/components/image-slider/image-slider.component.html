@@ -1,14 +1,18 @@
 <div class="slider">
   <div *ngFor="let slide of slides; let i = index" class="slide" [ngClass]="{ 'active': i === currentSlideIndex }">
     <img [src]="slide.imgSrc" alt="Slide {{ i + 1 }}" class="slide-img">
-    
     <div class="overlay"></div> <!-- Dark overlay layer -->
-
+    
     <div class="content">
       <h3 class="subtitle">{{ slide.subtitle }}</h3>
       <h1 class="title">{{ slide.title }}</h1>
       <p class="description">{{ slide.description }}</p>
       <a href="#" class="btn">Learn More</a>
     </div>
+  </div>
+
+  <!-- Progress Bar Container -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" [style.width]="progressBarWidth + '%'"></div>
   </div>
 </div>
