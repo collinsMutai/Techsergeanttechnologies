@@ -73,7 +73,7 @@
   color: #fff;
   font-weight: 700;
   line-height: 1.062;
-  padding: 10px 0px 20px;
+  padding: 10px 0px;
   margin-bottom: 10px;
 }
 
@@ -95,6 +95,7 @@
   border: 2px solid #bee041;
   font-size: 19px;
   font-weight: 700;
+  margin-top: 10px;
 }
 
 .active {
@@ -114,12 +115,19 @@
 @media (max-width: 768px) {
   .title {
     font-size: 50px;
+    width: 100%; /* Ensure title spans the full width */
+    padding: 0 15px; /* Reduce left and right padding */
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .description {
     font-size: 16px;
-    max-width: 90%; /* Adjust for mobile screen width */
-    margin-bottom: 20px;
+    width: 100%; /* Ensure description spans the full width */
+    padding: 0 15px; /* Reduce the left and right padding */
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px !important;
   }
 
   .subtitle {
@@ -135,6 +143,8 @@
     top: 45%; /* Slightly adjust content positioning */
     left: 50%;
     transform: translate(-50%, -45%); /* Keep it centered */
+    padding: 0 15px; /* Ensure content itself doesn't have excessive left/right padding */
+    width: 100%; /* Ensure the content spans the full width */
   }
 
   /* Optional: Adjust height on mobile */
@@ -147,11 +157,18 @@
 @media (max-width: 480px) {
   .title {
     font-size: 40px;
+    width: 100%; /* Ensure title spans the full width */
+    padding: 0 10px; /* Further reduce padding */
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .description {
-    font-size: 14px;
-    max-width: 90%; /* Further decrease width on smaller screens */
+    font-size: 16px;
+    width: 100%; /* Ensure description spans the full width */
+    padding: 0 10px; /* Further reduce padding */
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 15px;
   }
 
@@ -168,6 +185,8 @@
     top: 35%; /* Adjust content to be higher for smaller screens */
     left: 50%;
     transform: translate(-50%, -35%);
+    padding: 0 10px; /* Reduce content padding further */
+    width: 100%; /* Ensure the content spans the full width */
   }
 
   /* Ensure slider height remains 100vh on smaller screens */
