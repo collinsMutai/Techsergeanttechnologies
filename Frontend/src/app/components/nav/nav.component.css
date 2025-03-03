@@ -1,0 +1,88 @@
+/* Styling for the nav container */
+.nav-container {
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 80%;
+  padding: 20px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Makes it float over the image slider */
+  top: 20px; /* Align it to the top of the page */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Ensure it is perfectly centered */
+  z-index: 10; /* Make sure it stays on top of the image slider */
+}
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Urbanist", sans-serif;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.email, .phone {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c2c2c;
+  padding-left: 25px;
+}
+
+.phone{
+    border-left: 2px solid #d7d7d7;
+
+}
+
+.contact-button {
+  padding: 13px 35px;
+  background-color: #bee041;
+  color: #2c2c2c;
+  font-size: 17px;
+  font-weight: 800;
+  border: 2px solid #bee041;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #fff;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgb(44, 44, 43);
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: "Urbanist", sans-serif;
+  padding: 31px 0px;
+}
+
+.nav-links li a:hover {
+  color: #bee041;
+}
+
+/* Image slider container */
+app-image-slider {
+  position: relative; /* Ensures the slider container is positioned normally */
+  z-index: 1; /* Ensure it stays below the nav */
+}
