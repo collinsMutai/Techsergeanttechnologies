@@ -66,7 +66,6 @@
   font-weight: 600;
   color: #bee041;
   margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 .title {
@@ -189,7 +188,7 @@
   }
 
   .content {
-    top: 48%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -35%);
     padding: 0 10px;
