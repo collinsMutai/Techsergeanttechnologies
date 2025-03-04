@@ -41,6 +41,7 @@
 
 .logo {
   display: flex;
+  align-items: center;
   justify-content: space-between; /* Align logo and svg on opposite sides */
   width: 100%; /* Ensure it takes full width */
 }
