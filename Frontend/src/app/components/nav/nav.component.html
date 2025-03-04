@@ -1,7 +1,24 @@
 <div class="nav-container-wrapper">
   <div class="nav-container">
     <div class="nav-row">
-      <div class="logo">Techsergeanttechnologies</div>
+      <div class="logo">
+        <p>Techsergeanttechnologies</p>
+        <svg
+          (click)="toggleMobileMenu()"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="{1.5}"
+          stroke="currentColor"
+          className="size-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
       <div class="contact-info">
         <div class="contact-item">
           <div>
@@ -35,6 +52,21 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-nav-links" [ngClass]="{ open: mobileMenuOpen }">
+      <ul>
+        <li><a href="#home" (click)="navigateToSection('home')">Home</a></li>
+        <li><a href="#about" (click)="navigateToSection('about')">About</a></li>
+        <li>
+          <a href="#services" (click)="navigateToSection('services')"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="#contact" (click)="navigateToSection('contact')">Contact</a>
+        </li>
       </ul>
     </div>
   </div>
