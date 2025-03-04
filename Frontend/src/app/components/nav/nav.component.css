@@ -151,7 +151,7 @@
   width: 100%;
   height: auto;
   padding-bottom: 100px;
-   border-radius: 10px 10px 0 0;
+   border-radius: 10px;
   display: none;
   background-color: rgba(0, 0, 0, 0.8); /* Dark background for mobile menu */
   transition: top 0.3s ease-in-out; /* Smooth sliding effect */
@@ -209,11 +209,28 @@
     display: none;
   }
 
-  .logo svg {
-    display: block;
+  .logo {
+    display: flex;
+    justify-content: space-between;  /* Align logo and svg on opposite sides */
+    width: 100%;  /* Ensure it takes full width */
   }
 
   .logo p {
     font-size: 12px;
+    margin: 0;  /* Remove any default margin */
+  }
+
+  .logo svg {
+    display: block;
+    width: 30px;  /* Adjust size of svg */
+    height: 30px;
+    cursor: pointer;
+    margin-left: 10px;  /* Add some space between the logo and icon */
+  }
+
+  /* If you need to make any other adjustments for the mobile menu or container */
+  .mobile-nav-links {
+    top: 0;  /* Adjust position for mobile menu */
+    padding-top: 50px; /* Optional: to push down the content in mobile menu */
   }
 }
