@@ -1,0 +1,163 @@
+/* About Section Styles */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10px; /* Reduced padding left and right */
+  flex-wrap: wrap; /* For responsiveness */
+}
+
+.left-column {
+  flex: 1;
+  padding: 20px;
+  max-width: 45%;
+}
+
+.right-column {
+  flex: 1;
+  max-width: 45%;
+}
+
+.subheading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #bee041;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn {
+  padding: 15px 30px;
+  background-color: #bee041;
+  color: #2c2c2c;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 40px;
+  border: 2px solid #bee041;
+  font-size: 18px;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 40px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px; /* Space between cards */
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1;
+  max-width: 30%; /* Increased card width */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  color: #bee041;
+}
+
+.service-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px; /* Reduced padding left and right for smaller screens */
+  }
+
+  .left-column,
+  .right-column {
+    max-width: 100%;
+  }
+
+  .right-column {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+
+  .about-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .why-choose-us {
+    padding: 10px;
+  }
+
+  /* Adjusting Service Cards for smaller screens */
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    max-width: 100%; /* Increased card width for smaller screens */
+    margin-bottom: 30px;
+  }
+}
