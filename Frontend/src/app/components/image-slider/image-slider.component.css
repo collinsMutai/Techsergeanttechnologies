@@ -192,7 +192,7 @@
     left: 50%;
     transform: translate(-50%, -35%);
     padding: 0 10px;
-    width: 400px;
+    width: 100%;
   }
 
   .slider {
