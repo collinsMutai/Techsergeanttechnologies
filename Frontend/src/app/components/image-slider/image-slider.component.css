@@ -168,7 +168,7 @@
 @media (max-width: 480px) {
   .title {
     font-size: 40px;
-    width: 400px;
+    width: 100%;
     padding: 0 10px;
   }
 
@@ -191,7 +191,8 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -35%);
-    padding: 0 40px !important;
+    padding: 0 10px;
+    width: 400px;
   }
 
   .slider {
