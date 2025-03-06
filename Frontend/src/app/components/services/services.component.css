@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   padding: 40px 10px;
   text-align: center; /* Centers the content */
- 
 }
 
 .heading {
@@ -62,6 +61,43 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Call to Action Section */
+.cta-section {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-description {
+  font-size: 18px;
+  color: #6c757d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  background-color: #bee041;
+  color: #2c2c2c;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 40px;
+  border: 2px solid #bee041;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #7bbf29; /* Darker shade of the button color */
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .services-container {
@@ -93,5 +129,18 @@
   .services-img {
     max-width: 100%;
     height: auto;
+  }
+
+  /* Adjustments for Call to Action (CTA) section on mobile */
+  .cta-heading {
+    font-size: 30px;
+  }
+
+  .cta-description {
+    font-size: 16px;
+  }
+
+  .cta-btn {
+    font-size: 16px;
   }
 }
