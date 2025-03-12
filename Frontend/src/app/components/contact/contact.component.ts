@@ -1,20 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-<<<<<<< HEAD
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { environment } from '../../../environments/environment.prod';
-import * as emailjs from 'emailjs-com'; 
-=======
->>>>>>> 2c1bc98db42b79357fe11b8350afa64f161d62aa
+import * as emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css',
+  styleUrls: ['./contact.component.css'], // Fixed 'styleUrl' to 'styleUrls'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {}
@@ -29,11 +32,12 @@ export class ContactComponent {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-<<<<<<< HEAD
       const formData = this.contactForm.value;
 
       // Sending the form data to EmailJS
       this.sendEmail(formData);
+    } else {
+      console.log('Form is invalid');
     }
   }
 
@@ -60,12 +64,4 @@ export class ContactComponent {
       }
     );
   }
-=======
-      console.log(this.contactForm.value);
-      // You can add logic to send form data to your backend
-    } else {
-      console.log('Form is invalid');
-    }
-  }
->>>>>>> 2c1bc98db42b79357fe11b8350afa64f161d62aa
 }
