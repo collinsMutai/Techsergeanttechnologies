@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+<<<<<<< HEAD
 import { environment } from '../../../environments/environment.prod';
 import * as emailjs from 'emailjs-com'; 
+=======
+>>>>>>> 2c1bc98db42b79357fe11b8350afa64f161d62aa
 
 @Component({
   selector: 'app-contact',
@@ -26,6 +29,7 @@ export class ContactComponent {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
+<<<<<<< HEAD
       const formData = this.contactForm.value;
 
       // Sending the form data to EmailJS
@@ -56,4 +60,12 @@ export class ContactComponent {
       }
     );
   }
+=======
+      console.log(this.contactForm.value);
+      // You can add logic to send form data to your backend
+    } else {
+      console.log('Form is invalid');
+    }
+  }
+>>>>>>> 2c1bc98db42b79357fe11b8350afa64f161d62aa
 }
